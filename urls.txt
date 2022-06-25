@@ -1,0 +1,79 @@
+# URLS of data to be added to IPFS and Filecoin
+
+## Colombia
+"https://hrdag.org/casanare-colombia/", "casanare-colombia/index-en.html"
+"https://hrdag.org/content/colombia/results-paper.pdf", "casanare-colombia/results-paper.pdf"
+"https://hrdag.org/content/colombia/results-paper-ES.pdf", "casanare-colombia/results-paper-ES.pdf"
+"https://hrdag.org/content/colombia/cansaresummary.html", "casanare-colombia/cansaresummary.html"
+
+## Guatemala CIIDH
+"https://hrdag.org/guatemala-ciidh-data/", "guatemala-ciidh/index-en.html"
+"https://hrdag.org/wp-content/uploads/2014/01/atv201.csv.zip", "guatemala-ciidh/atv201.csv.zip"
+"https://hrdag.org/guatemala-ciidh-data-dictionary/", "guatemala-ciidh/guatemala-ciidh-data-dictionary/index-en.html"
+"https://hrdag.org/guatemala-ciidh-data-dictionary/", "guatemala-ciidh/guatemala-ciidh-data-dictionary.html"
+"https://hrdag.org/guatemala-ciidh-data-value-labels/", "guatemala-ciidh/guatemala-ciidh-data-value-labels.html"
+"https://hrdag.org/guatemala-ciidh-data-variables/", "guatemala-ciidh/guatemala-ciidh-data-variables.html"
+
+## Kosovo
+"https://hrdag.org/kosovo-data/", "kosovo/index-en.html"
+
+### Kosovo - Policy or Panic Report
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-Policy_or_panic-2000.pdf", "kosovo/policyorpanic/kosovo-Policy_or_panic-2000.pdf"
+
+### Kosovo - Political Killings Report
+"https://hrdag.org/wp-content/uploads/2013/08/kosovo-politicalkillings-2000-cc.pdf", "kosovo/politicalkillings/kosovo-politicalkillings-2000-cc.pdf"
+
+### Kosovo - Migration
+"https://hrdag.org/kosovo-data-migration/", "kosovo/migration/index-en.html"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-Policy_or_panic-2000.pdf", "kosovo/policyorpanic/kosovo-Policy_or_panic-2000.pdf"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-morina-border.csv", "kosovo/migration/kosovo-morina-border.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-alt_cnts-border.csv", "kosovo/migration/kosovo-alt_cnts-border.csv"
+"https://hrdag.org/wp-content/uploads/2013/09/survey.pdf", "kosovo/migration/survey.pdf"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-ipls-list.csv", "kosovo/migration/kosovo-ipls-list.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-ipls-int.csv", "kosovo/migration/kosovo-ipls-int.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-phr-transit.csv", "kosovo/migration/kosovo-phr-transit.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-hrw-transit.csv", "kosovo/migration/kosovo-hrw-transit.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-migration-est.csv", "kosovo/migration/kosovo-migration-est.csv"
+
+### Kosovo - Killings
+"https://hrdag.org/kosovo-data-killings/", "kosovo/killings/index-en.html"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-md_pub.csv", "kosovo/killings/md_pub.csv"
+"https://hrdag.org/wp-content/uploads/2013/06/kosovo-killings-refugeeflow-ICTY2002.pdf", "kosovo/killings/kosovo-killings-refugeeflow-ICTY2002.pdf"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-dtk2_oth.csv", "kosovo/killings/kosovo-dtk2_oth.csv"
+"https://hrdag.org/wp-content/uploads/2013/06/kosovo-corrigendum.pdf", "kosovo/killings/kosovo-corrigendum.pdf"
+ 
+
+### Kosovo - Other
+"https://hrdag.org/kosovo-data-other/", "kosovo/other/index-en.html"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-pcodes.csv", "kosovo/other/kosovo-pcodes.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-nato_bombing_data.csv", "kosovo/other/kosovo-nato_bombing_data.csv"
+"https://hrdag.org/wp-content/uploads/2013/07/kosovo-kla_activity.csv", "kosovo/other/kosovo-kla_activity.csv"
+
+## Liberia
+"https://hrdag.org/liberia-data/", "liberia/index-en.html"
+"https://hrdag.org/wp-content/uploads/2013/02/Benetech-TRC-descriptives-final.pdf", "liberia/Benetech-TRC-descriptives-final.pdf"
+"https://hrdag.org/liberia-data-dictionary/", "liberia/liberia-data-dictionary.html"
+"https://hrdag.org/content/liberia/anonymized-statgivers.csv", "liberia/anonymized-statgivers.csv"
+"https://hrdag.org/content/liberia/anonymized-trc-main.csv", "liberia/anonymized-trc-main.csv"
+
+## Sierra Leone
+"https://hrdag.org/sierra-leone-data/", "sierra-leone/index-en.html"
+"https://hrdag.org/content/sierraleone/SL-TRC-data.csv", "sierra-leone/SL-TRC-data.csv"
+"https://hrdag.org/content/sierraleone/SL-TRC_data.html", "sierra-leone/SL-TRC_data.html"
+"https://hrdag.org/content/sierraleone/SL-TRC-statistics-chapter-final.pdf", "sierra-leone/SL-TRC-statistics-chapter-final.pdf"
+
+
+## Fixups
+# Convert URLS in HTML to correct relative links
+
+# Point https://hrdag.org/policyorpanic/ to kosovo/policyorpanic/
+# TODO mirror English, Serbian and Albanian HTML translations at hrdag.org/policyorpanic/ to kosovo/policyorpanic/
+
+## Tests
+# Do we have any external links? (We should not -- this should be self-contained)
+# Do we have any dead links?
+# Do we have any files that are not linked from elsewhere (apart from the root)
+# Are they all file formats we know about (no mispellings)?
+# Are any weird sizes? (<10 byte files are weird )
+
+# TODO link to previous version of documents

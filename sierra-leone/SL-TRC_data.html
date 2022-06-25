@@ -1,0 +1,1487 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>SL-TRC</title>
+</head>
+<body>
+<big><big><a href="http://hrdag.org/about/sierra_leone.shtml"><img
+ src="Benetech_med_wh.gif"
+ alt="Benetech Human Rights Program" width="218" height="77"
+ style="border: 0px solid ; "></a></big></big><!--END SHR HEADER--><span
+ style="font-weight: bold;"><br>
+<br>
+</span>
+<h1 style="font-family: helvetica,arial,sans-serif;"><big>SL-TRC-Data</big></h1>
+<p>The data from the Sierra Leone Truth and Reconciliation Commission is contained 
+  in a <a href="SL-TRC-data.csv">comma-delimited ASCII file</a>. The 
+  tables below describe the variables in the data file.&nbsp; Note that to protect 
+  the privacy of the people who suffered, all personal identifying information 
+  about the victims or witnesses of the violations described in the data has been 
+  removed.<br>
+  <br>
+  The unit of analysis for each record in this structure is the <span
+ style="text-decoration: underline;">violation</span>. </p>
+
+<p>Each violation
+was of a
+particular type, happened at a particular time and place, and was
+committed by zero, one, or several organizational perpetrators. The
+violation was committed against zero or one named (individually
+identified) victims, and zero or more anonymous (unidentified)
+additional victims.<br>
+<br>
+In order to
+count the number of violations recorded in the dataset, users should
+simply count records. Each violation may have been committed against
+one or many persons in the same place at the same time. In the cases
+where one violation was committed against mare than one person, the
+records share the same <span style="font-weight: bold;">actid</span>.
+The variable <span style="font-weight: bold;">actorid</span>
+identifies
+unique victims, so in order to count victims, the user should count the
+unique values of <span style="font-weight: bold;">actorid</span>. Note
+that the value of actorid is repeated for the cases where a victim
+suffered more than one violation.<big
+ style="font-family: helvetica,arial,sans-serif;"><big><br>
+</big></big></p>
+<div style="text-align: justify;">
+</div>
+<big style="font-family: helvetica,arial,sans-serif;"><big>
+</big></big>
+<table style="font-family: helvetica,arial,sans-serif;" border="1"
+ cellspacing="0" cols="3" frame="box" rules="groups">
+  <colgroup><col width="103"></colgroup> <colgroup><col width="106"></colgroup>
+  <colgroup><col width="946"></colgroup> <tbody>
+    <tr>
+      <td style="font-family: monospace;" colspan="2" align="center"
+ bgcolor="#00ffff" height="22" width="210"><b>Violation variables</b></td>
+      <td align="left" width="946"><big><b><br>
+      </b></big></td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left" height="22">Variable name</td>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left">Variable type</td>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left">Description</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">roleid</td>
+      <td style="font-family: monospace;" align="left">long </td>
+      <td style="font-family: monospace;" align="left">Unique
+identifier for a victim suffering
+one violation. </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">violt</td>
+      <td style="font-family: monospace;" align="left">str23</td>
+      <td style="font-family: monospace;" align="left">Violation<br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">locar</td>
+      <td style="font-family: monospace;" align="left">str3 </td>
+      <td style="font-family: monospace;" align="left">Region of
+violation</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">locad</td>
+      <td style="font-family: monospace;" align="left">str3 </td>
+      <td style="font-family: monospace;" align="left">District of
+violation</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">locac</td>
+      <td style="font-family: monospace;" align="left">str5</td>
+      <td style="font-family: monospace;" align="left">Chiefdom of
+violation</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">actid</td>
+      <td style="font-family: monospace;" align="left">long </td>
+      <td style="font-family: monospace;" align="left">Unique
+identifier for a violation. <br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">n_yr</td>
+      <td style="font-family: monospace;" align="left">float</td>
+      <td style="font-family: monospace;" align="left">Year of alleged
+violation</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">n_mo</td>
+      <td style="font-family: monospace;" align="left">float</td>
+      <td style="font-family: monospace;" align="left">Month of alleged
+violation</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">n_dy</td>
+      <td style="font-family: monospace;" align="left">float</td>
+      <td style="font-family: monospace;" align="left">Day of alleged
+violation</td>
+    </tr>
+  </tbody>
+</table>
+<br style="font-family: helvetica,arial,sans-serif;">
+<table style="font-family: helvetica,arial,sans-serif;" border="1"
+ cellspacing="0" cols="3" frame="box" rules="groups">
+  <colgroup><col width="103"></colgroup> <colgroup><col width="106"></colgroup>
+  <colgroup><col width="946"></colgroup> <tbody>
+    <tr>
+      <td style="font-weight: bold; font-family: monospace;" colspan="2"
+ align="center" bgcolor="#00ffff" height="22" width="210">Victim
+variables</td>
+      <td style="font-family: monospace;" align="left" width="946"><br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left" height="22">Variable name</td>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left">Variable type</td>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left">Description</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">actorid</td>
+      <td style="font-family: monospace;" align="left">long</td>
+      <td style="font-family: monospace;" align="left">Unique
+identifier for a victim. <br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">gendc</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Sex code (
+M=Male, F=Female, ?=Unknown )</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">ethn1t</td>
+      <td style="font-family: monospace;" align="left">str9</td>
+      <td style="font-family: monospace;" align="left">Aggregation of
+ethnic groups (<a href="#Ethnicity_Aggregations">see table below</a>) *<br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">ethn2t
+      </td>
+      <td style="font-family: monospace;" align="left">str17</td>
+      <td style="font-family: monospace;" align="left">Ethnic group of
+victim (<a href="#Ethnicity_Aggregations">see table below</a>) **<br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">langt</td>
+      <td style="font-family: monospace;" align="left">str25</td>
+      <td style="font-family: monospace;" align="left">Language of
+victim</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">age</td>
+      <td style="font-family: monospace;" align="left">int </td>
+      <td style="font-family: monospace;" align="left">Age of victim in
+years</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">arngt</td>
+      <td style="font-family: monospace;" align="left">str13 </td>
+      <td style="font-family: monospace;" align="left">Age range of
+victim (Child, Adult or Elder)</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">occut</td>
+      <td style="font-family: monospace;" align="left">str16 </td>
+      <td style="font-family: monospace;" align="left">Occupation of
+victim</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">cage</td>
+      <td style="font-family: monospace;" align="left">str5<br>
+      </td>
+      <td style="font-family: monospace;" align="left">Age categories
+with 6 year period ( 0-5,
+6-11, &#8230; , 66-71, 72+ )</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">censusAge</td>
+      <td style="font-family: monospace;" align="left">str5<br>
+      </td>
+      <td style="font-family: monospace;" align="left">Age categories
+with 5 year period ( 0-4,
+5-9, &#8230; , 75-79, 80+ )</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h2><big><font color="#000000"><font style="font-size: 16pt;" size="4"><big><b>Perpetrator
+Aggregations</b></big></font></font></big></h2>
+<p style="margin-bottom: 0cm; text-align: justify;" lang="en-US">This
+is the perpetrator classification list used by the TRC to
+<span lang="en-GB"><font color="#000000">classify perpetrators cited
+in witness testimonies. Each of the P* variables contains a 1 if this
+perpetrator was involved in this violation; otherwise 0 is recorded. <br>
+</font></span></p>
+<div style="text-align: justify;">
+</div>
+<p style="margin-bottom: 0cm; text-align: justify;" lang="en-GB"><font
+ color="#000000">Pd_*
+list all the actors in the Sierra Leonan conflict (<a
+ href="#Perpetrator_Aggregations">see the table
+below</a>).</font></p>
+<div style="text-align: justify;">
+</div>
+<p style="text-align: justify;"><span lang="en-GB"><font color="#000000">P3_*
+is a refined aggregation separating the AFRC from the SLA. In this
+case SLA means the Sierra Leonean national army prior to the 25<sup>th</sup>
+May 1997 coup. The AFRC refers to the post-coup so<span
+ style="background-color: rgb(255, 255, 255);">l</span><span
+ style="background: rgb(255, 255, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;">diers
+who initially formed a g</span>overnment and then fled Freetown after
+the ECOMOG intervention. Note that the Westside boys are considered
+to be aligned with the AFRC, not the RUF. </font></span>
+</p>
+<p style="text-align: justify;" lang="en-GB"><font color="#000000">To
+complete the aggregation, the following operations are applied to the
+data: <br>
+</font></p>
+<ul style="text-align: justify;">
+  <li>
+    <p><span lang="en-GB"><font color="#000000">AFRC
+abuses prior to the 25<sup>th</sup> May 1997 are
+moved to the SLA category</font></span></p>
+  </li>
+  <li>
+    <p><span lang="en-GB"><font color="#000000">SLA
+abuses from the 25<sup>th</sup> May 1997 are moved
+to the AFRC category</font></span></p>
+  </li>
+  <li>
+    <p lang="en-GB"><font color="#000000">Ambiguous
+abuses occurring at some unknown time in 1997 are
+moved to an additional category AFRC/SLA as the correct group is
+ambiguous.</font></p>
+  </li>
+</ul>
+<p style="text-align: justify;" lang="en-GB"><font color="#000000"><br>
+Arguably
+the AFRC/SLA category could be eliminated, with the abuses categorized
+as AFRC. The abuse profile for the AFRC/SLA category is comparable
+to that of the AFRC.</font></p>
+<p style="text-align: justify;" lang="en-GB"><font color="#000000">The
+'unknown' category covers abuses where no mention was made of the
+responsible institution or cases where the presence of several
+perpetrator groups make it impossible to distinguish which was
+responsible for a specific abuse.</font></p>
+<br style="font-family: helvetica,arial,sans-serif;">
+<br style="font-family: helvetica,arial,sans-serif;">
+<table style="font-family: helvetica,arial,sans-serif;" border="1"
+ cellspacing="0" cols="3" frame="box" rules="groups">
+  <colgroup><col width="103"></colgroup> <colgroup><col width="106"></colgroup>
+  <colgroup><col width="946"></colgroup> <tbody>
+    <tr>
+      <td style="font-weight: bold; font-family: monospace;" colspan="2"
+ align="center" bgcolor="#00ffff" height="22" width="210">Perpetrator
+variables</td>
+      <td style="font-family: monospace;" align="left" width="946"><br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left" height="22">Variable name</td>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left">Variable type</td>
+      <td style="font-family: monospace; font-weight: bold;"
+ align="left">Description</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_ruf</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">RUF -
+Revolutionary United Front</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_sla</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">SLA - Sierra
+Leone Army</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_afrc</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">AFRC - Armed
+Forces Revolutionary Council
+(inc. Westside Boys)</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_army</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">AFRC/SLA - 1997
+abuse by either SLA or AFRC
+where actual factional responsibility is ambiguous</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_rebel</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Rebels - Abuses
+attributed to 'rebels'
+where the statement giver was unable to name a specific faction</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_cdf</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">CDF &#8211; Civil
+Defence Force</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_police</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Police - Police
+officers including SSD
+division</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_gaf</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">GAF - Guinean
+Armed Forces</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_ulimo</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">ULIMO - United
+Liberation Movement for
+Democracy</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_ecomog</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">ECOMOG -
+Economic Community of West African
+States (ECOWAS) Military Observer Group</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_unknown</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Unknown - Abuse
+not attributed to any
+perpetrator group</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">p3_misc</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Miscellaneous -
+Abuse attributed to
+miscellaneous minor perpetrator group.</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_airwing</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Air Wing</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_afrc</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Armed Forces
+Revolutionary Council</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_rebels</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Rebels</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_ruf</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Revolutionary
+United Front</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_nprc</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">National
+Provision Ruling Council</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_sla</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">SLA - Sierra
+Leone Army<br>
+      </td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_westside</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Westside Boys</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_sobels</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Sobel (Soldier /
+Rebel actor)</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_armed</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Other / Unknown
+Armed Faction</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_cdf</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Unspecified CDF
+Militia</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_kamajors</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Kamajors</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_donsos</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Donsos</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_gbethes</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Gbethes</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_tamaboros</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Tamaboros</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_kapras</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Kapras</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_hunters</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Hunters</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_cdu</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Civil Defence
+Unit</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_ssd</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Police SSD
+Division</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_police</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">General Police</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_civillians</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Civilians /
+Persons Unknown</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_duress</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Person/s Under
+Duress</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_gaf</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Guinea Armed
+Forces</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_npfl</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">National
+Patriotic Forces of Liberia</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_ulimok</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">ULIMO-K</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_ulimoj</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">ULIMO-J</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_libforce</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Unspecified
+Liberian Force</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_mercs</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">Mercenaries</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_ecomog</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">ECOMOG</td>
+    </tr>
+  </tbody> <tbody>
+    <tr>
+      <td style="font-family: monospace;" align="left" height="22">pd_un</td>
+      <td style="font-family: monospace;" align="left">str1</td>
+      <td style="font-family: monospace;" align="left">UN peacekeepers</td>
+    </tr>
+  </tbody>
+</table>
+<br style="font-family: helvetica,arial,sans-serif;">
+<h2><big><font style="font-family: helvetica,arial,sans-serif;"
+ color="#000000"><font style="font-size: 16pt;" size="4"><big><b><a
+ name="Perpetrator_Aggregations"></a>Perpetrator Aggregation Table</b></big></font></font></big><br>
+</h2>
+<table style="width: 554px; font-family: helvetica,arial,sans-serif;"
+ border="1" bordercolor="#000000" cellpadding="0" cellspacing="0">
+  <col width="35"> <col width="38"> <col width="227"> <col width="78">
+  <col width="175"> <tbody>
+    <tr valign="bottom">
+      <td
+ style="font-family: monospace; text-align: center; vertical-align: middle; font-weight: bold;"
+ colspan="2" height="16" width="73">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB">Category</p>
+      </td>
+      <td
+ style="font-family: monospace; text-align: center; vertical-align: middle; font-weight: bold;"
+ width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB">Institution</p>
+      </td>
+      <td
+ style="font-family: monospace; text-align: center; vertical-align: middle; font-weight: bold;"
+ width="78">
+      <p>pd<br>
+      </p>
+      </td>
+      <td
+ style="font-family: monospace; text-align: center; vertical-align: middle; font-weight: bold;"
+ width="175">
+      <p> pcat3</p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="3" height="17"
+ width="300">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Sierra Leonean
+Perpetrators</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="27" width="35">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Armed Forces</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="9" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Air Wing</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/AIR</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">SLA</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">AFRC</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/AFRC</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">AFRC</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Rebels</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/REB</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Rebels</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">RUF</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/RUF</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">RUF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">NPRC</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/NPRC</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">SLA</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Sierra Leone
+Army (SLA)</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/SLA</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">SLA</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Westside Boys</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/WEST</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">AFRC</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Sobel (Soldier
+/ Rebel actor)</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/SOB</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Rebels</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Other / Unknown</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ARM/?</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Unknown</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF (Civil
+Defence Militias)</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="8" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Kamajors</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/KAM</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Donsos</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/DON</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Gbethes</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/GBE</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Tamaboros</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/TAM</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Kparas</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/KPA</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Hunters</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/HUN</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Civil Defence
+Unit</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/CDU</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Undefined CDF
+Militia</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CDF/?</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">CDF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Civil
+Authorities</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="4" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Government</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CIV/GOV</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Judiciary</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CIV/JUD</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">SSD / OSD</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CIV/SSD</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Police</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">General Police</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CIV/POL</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Police</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Citizens</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="2" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Person/s Under
+Duress</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CIT/DUR</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">General
+Civilian / Persons Unknown</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">CIT/GEN</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="3" height="17"
+ width="300">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Outside
+Perpetrators</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"> </font><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="14" width="35">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">External Forces</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="5" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Guinea Armed
+Forces (GAF)</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">EXT/GAF</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">GAF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">NPFL (Ntnl.
+Patriotic Front of
+Liberia)</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">EXT/NPFL</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">RUF</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ULIMO-K</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">EXT/ULK</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">ULIMO</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ULIMO-J</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">EXT/ULJ</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">ULIMO</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Liberian Force</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">EXT/LIB</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Mercenary Forces</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="4" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Gurkhas</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">MER/GUR</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Executive
+Outcomes Mercenaries</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">MER/EXEC</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Sandline Intl.
+Mercenaries</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">MER/SAND</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Other / Unknown
+Mercenaries</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">MER/?</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" colspan="2" height="17"
+ width="265">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">Interventionist
+Forces</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <br>
+      </p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" rowspan="2" width="38">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><br>
+      </p>
+      </td>
+      <td style="font-family: monospace;" height="17" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">ECOMOG</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">INT/ECO</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Ecomog</font></font></p>
+      </td>
+    </tr>
+    <tr valign="bottom">
+      <td style="font-family: monospace;" width="227">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">UN Peacekeepers</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="78">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" lang="en-GB"><font
+ color="#000000"><font style="font-size: 9pt;">INT/UNP</font></font></p>
+      </td>
+      <td style="font-family: monospace;" width="175">
+      <p style="margin-left: 0.1cm; margin-right: 0.1cm;" align="center"
+ lang="en-GB"> <font color="#000000"><font style="font-size: 9pt;">Misc</font></font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="margin-bottom: 0cm; font-family: helvetica,arial,sans-serif;"></p>
+<h2><br>
+</h2>
+<h2><big><font style="font-family: helvetica,arial,sans-serif;"
+ color="#000000"><font style="font-size: 16pt;" size="4"><big><b><a
+ name="Ethnicity_Aggregations"></a>Ethnicity Aggregations</b></big></font></font></big></h2>
+<p style="font-family: helvetica,arial,sans-serif; text-align: justify;"
+ lang="en-GB">
+</p>
+<p style="margin-bottom: 0cm;" lang="en-US">This
+is the ethnicity classification list used by the TRC to
+classify
+the ethnicity of the statement-giver and of the people he or she
+cited in the statement to the TRC.<br>
+<br>
+</p>
+<p style="text-align: justify;" lang="en-GB"><font color="#000000">* <a
+ name="ethn1"></a>ethn1:
+The initial
+aggregation of ethnicity was designed to test suggestions that groups
+have targeted victims according to a broad allegiance, either to the
+North or South; in other words, Temne and Mende respectively. The
+proposed ethnic allegiances were verified by researchers.</font></p>
+<table style="font-family: helvetica,arial,sans-serif;" border="1"
+ bordercolor="#000000" cellpadding="0" cellspacing="0" width="554">
+  <col width="82"> <col width="470"> <thead> <tr valign="top">
+    <td style="font-family: monospace;" width="82">
+    <p class="table-heading-western" align="center" lang="en-GB"><font
+ color="#000000"><b>Category</b></font></p>
+    </td>
+    <td style="font-family: monospace;" width="470">
+    <p class="table-heading-western" align="center" lang="en-GB"><font
+ color="#000000"><b>Members</b></font></p>
+    </td>
+  </tr>
+  </thead> <tbody>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="82">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Northern</font></p>
+      </td>
+      <td style="font-family: monospace;" width="470">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Temne,
+Koranko, Limba, Loko, Yalunka</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="82">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Southern</font></p>
+      </td>
+      <td style="font-family: monospace;" width="470">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Mende,
+Sherbro, Krim, Vai, Kissi</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="82">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Other</font></p>
+      </td>
+      <td style="font-family: monospace;" width="470">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Krio,
+Fourhabay, Kru, Kono, Susu, Lebanese, Madingo, Fullah,
+Other</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="82">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Foreign</font></p>
+      </td>
+      <td style="font-family: monospace;" width="470">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Caucasian,
+Liberian, Nigeran, Burkinabey, Guinean, Othe</font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: justify;" lang="en-GB"><font color="#000000"><font
+ size="3"><a name="ethn2t"></a>ethn2t:
+The second
+aggregation was used to consider more specific targeting according to
+ethnicity. For example, other sources suggested that the NPFL
+targeted the trading peoples &#8211; Madingo and Fullah &#8211; because of
+the perception (by perpetrators) that they were loyal to Samuel Doe.</font></font></p>
+<table style="font-family: helvetica,arial,sans-serif;" border="1"
+ bordercolor="#000000" cellpadding="0" cellspacing="0" width="554">
+  <col width="126"> <col width="426"> <thead> <tr valign="top">
+    <td style="font-family: monospace;" width="126">
+    <p class="table-heading-western" align="center" lang="en-GB"><font
+ color="#000000"><b>Category</b></font></p>
+    </td>
+    <td style="font-family: monospace;" width="426">
+    <p class="table-heading-western" align="center" lang="en-GB"><font
+ color="#000000"><b>Members</b></font></p>
+    </td>
+  </tr>
+  </thead> <tbody>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Northern</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Temne,
+Koranko, Limba, Loko, Yalunka</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Southern</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Mende,
+Sherbro, Krim, Vai, Kissi</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Krio</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Krio,
+Fourhabay</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Trader</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Madingo,
+Fullah</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Kono</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Kono</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Other</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Kru,
+Susu, Lebanese</font></p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td style="font-family: monospace;" width="126">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Foreign</font></p>
+      </td>
+      <td style="font-family: monospace;" width="426">
+      <p class="table-contents" lang="en-GB"><font color="#000000">Caucasian,
+Liberian, Nigerian, Burkinabey, Guinean</font></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p style="margin-bottom: 0cm; font-family: helvetica,arial,sans-serif;"><br>
+</p>
+<p><big><font size="2"><big>The location codes used in the data file are contained
+	<a href="location-vocabulary.csv">here</a>.</big></font></big>
+<p><big><font size="2"><big>For the Sierra Leone TRC's evaluation of this data, 
+  see <a href="SL-TRC-statistics-chapter-final.pdf">Statistical 
+  Appendix</a> (25 March 2005) Adobe Acrobat PDF format, 407 Kb</big></font></big><br
+
+
+
+ style="font-family: helvetica,arial,sans-serif;">
+  <br style="font-family: helvetica,arial,sans-serif;">
+  <br style="font-family: helvetica,arial,sans-serif;">
+  <br>
+</p>
+</body>
+</html>
